@@ -1,9 +1,4 @@
-.input-texto {
-    margin: 24px 0;
-    /*dessa forma, o primeiro parametro é  cima baixo, o segundo é esquerda direita*/
-}
-
-.input-texto label {
+.lista label {
 
     display: block;
     margin-bottom: 8px;
@@ -11,7 +6,8 @@
 
 }
 
-.input-texto input {
+.lista select {
+
     background-color: #fff;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6);
     width: 100%;
@@ -20,4 +16,5 @@
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
+
 }
