@@ -1,11 +1,14 @@
 import './lista.css'
-const Lista = (prop) => {
+const Lista = (props) => {
 
     return (
         <div className='lista'>
-            <label>{prop.label}</label>
-            <select>
-                {prop.itens.map(item => <option key={item}>{item}</option>)}
+            <label>{props.label}</label>
+            <select required={props.required}
+                value={props.valor} onChange={evento => props.aoAlterado(evento.target.value)}>
+
+                {props.itens.map(item => <option key={item}>{item}</option>)}
+
             </select>
         </div>
     )
