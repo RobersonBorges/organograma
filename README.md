@@ -1,2 +1,2 @@
 # organograma
- Organograma em React Alura
+ Organograma desenvolvido em React em um treinamento da Alura
