@@ -11,23 +11,19 @@ const Form = (props) => {
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
-    const times = [
-        'PT CHEI DE MACRO',
-        'PT CHEI DE MULHER',
-        'PT CHEI DE MÁ VONTADE',
-        'PT CHEI DE GARIMPEIRO',
-        'PT CHEI DE MIGUE'
-    ]
-
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log('salvo ', nome, cargo, imagem, time)
+
         props.aoMembroCadastrado({
             nome,
             cargo,
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -52,7 +48,8 @@ const Form = (props) => {
                     aoAlterado={valor => setImagem(valor)}
                 />
                 <Lista required={true}
-                    label="PTs da Asgard" itens={times}
+                    label="PTs da Asgard" itens={props.times}
+                    valor={time}
                     aoAlterado={valor => setTime(valor)}
 
                 />
