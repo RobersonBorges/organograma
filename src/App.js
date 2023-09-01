@@ -37,7 +37,7 @@ function App() {
   const [membros, setMembros] = useState([])
 
   const aoNovoMembroAdicionado = (membro) => {
-    console.log(membro)
+
     setMembros([...membros, membro])
 
   }
